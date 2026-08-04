@@ -1,3 +1,5 @@
+package com.example.tarot
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -41,7 +43,8 @@ fun App() {
                 label = { Text("Nombre del Usuario (TikTok)") },
                 colors = TextFieldDefaults.textFieldColors(
                     backgroundColor = Color.White,
-                    focusedIndicatorColor = Color(0xFFFFD700)
+                    focusedIndicatorColor = Color(0xFFFFD700),
+                    textColor = Color.Black
                 ),
                 modifier = Modifier.fillMaxWidth(0.8f)
             )

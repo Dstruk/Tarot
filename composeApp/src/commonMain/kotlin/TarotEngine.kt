@@ -1,3 +1,5 @@
+package com.example.tarot
+
 import kotlin.math.abs
 
 data class TarotCard(
@@ -34,12 +36,8 @@ object TarotEngine {
         TarotCard(21, "El Mundo", "Mayor", "Finalización, integración, viaje.", "Positiva")
     )
 
-    /**
-     * Selecciona una carta basada en el nombre de usuario y el tiempo.
-     * Esto crea una "huella digital" para la lectura.
-     */
     fun getCardForUser(username: String): TarotCard {
-        val timeSeed = getEpochMillis() / (1000 * 60) // Cambia cada minuto para el mismo usuario
+        val timeSeed = getEpochMillis() / (1000 * 60)
         val seed = username.hashCode().toLong() + timeSeed
         val index = abs(seed.toInt()) % majorArcana.size
         return majorArcana[index]
