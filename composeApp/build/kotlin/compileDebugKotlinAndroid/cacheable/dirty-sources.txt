@@ -1,9 +1,0 @@
-C:\Users\Admin\AndroidStudioProjects\Tarot2\composeApp\src\commonMain\kotlin\com\example\tarot\App.kt
-C:\Users\Admin\AndroidStudioProjects\Tarot2\composeApp\src\androidMain\kotlin\Platform.android.kt
-C:\Users\Admin\AndroidStudioProjects\Tarot2\composeApp\src\commonMain\kotlin\com\example\tarot\Platform.kt
-C:\Users\Admin\AndroidStudioProjects\Tarot2\composeApp\src\commonMain\kotlin\TarotEngine.kt
-C:\Users\Admin\AndroidStudioProjects\Tarot2\composeApp\src\commonMain\kotlin\Platform.kt
-C:\Users\Admin\AndroidStudioProjects\Tarot2\composeApp\src\androidMain\kotlin\com\example\tarot\MainActivity.kt
-C:\Users\Admin\AndroidStudioProjects\Tarot2\composeApp\build\generated\compose\resourceGenerator\kotlin\commonResClass\tarot\composeapp\generated\resources\Res.kt
-C:\Users\Admin\AndroidStudioProjects\Tarot2\composeApp\src\commonMain\kotlin\App.kt
-C:\Users\Admin\AndroidStudioProjects\Tarot2\composeApp\src\commonMain\kotlin\com\example\tarot\TarotEngine.kt
