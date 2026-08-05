@@ -7,6 +7,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -18,10 +20,12 @@ jobs:
           distribution: 'temurin'
 
       - name: Setup Gradle
-        uses: gradle/gradle-build-action@v3
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: wrapper
 
       - name: Build Web (Wasm)
-        run: ./gradlew :composeApp:wasmJsBrowserDistribution
+        run: ./gradlew :composeApp:wasmJsBrowserDistribution --no-daemon
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
