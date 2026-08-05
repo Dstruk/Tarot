@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
+
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.application)
@@ -12,6 +14,7 @@ kotlin {
         }
     }
     
+    @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
         moduleName = "composeApp"
         browser {
@@ -38,10 +41,6 @@ kotlin {
                 implementation(libs.androidx.activity.compose)
             }
         }
-        val wasmJsMain by getting {
-            dependencies {
-            }
-        }
     }
 }
 
@@ -55,11 +54,6 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
-    }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
     }
     buildTypes {
         getByName("release") {

@@ -8,7 +8,9 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    // CAMBIO AQUÍ: Cambiamos de FAIL_ON_PROJECT_REPOS a PREFER_PROJECT
+    // Esto permite que el plugin de Kotlin Wasm añada el repositorio de Binaryen automáticamente.
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
         google()
         mavenCentral()
